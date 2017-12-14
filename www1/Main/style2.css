@@ -1,0 +1,129 @@
+html,body{
+background-color: darkslategray;
+height:100%;
+}
+h1{
+    text-align: center;
+    font-family: 'Allerta Stencil';
+    /*font-size: 40px;*/
+    
+    background: -webkit-linear-gradient(#000000, #FF6347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   font-size: 2.5em;
+    letter-spacing: 6px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+a{
+text-decoration: none;
+color: black;
+padding: 15px;
+letter-spacing: .7px;
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+}
+    a:hover{
+        color: white;
+        border-bottom-color: orange;
+
+    }
+ #header h1, #header ul {
+    display: inline-block;
+    width: auto;
+    zoom: 1;
+    *display: inline; /* ie6 & 7 */
+}
+
+#header ul li {
+    display: inline;
+}
+body{
+margin:0;
+background-image: url("taj1.jpg");
+background-size 100%;
+background-repeat: no-repeat;
+}
+ul{
+margin-right: :100px;
+float: right;
+}
+li{
+padding:10px;
+display:inline;
+}
+
+input[type="text"] {
+    width: 250px;
+  height: 45px;
+    display: inline;
+  padding: 7px;
+  margin-left:20px;
+  align:center;
+  border-radius:5px;
+  }
+  input[type="date"] {
+    width: 250px;
+  height: 45px;
+    display: inline;
+  padding:7px;
+  margin-left:20px;
+  align:center;
+  border-radius:5px;
+  }
+form{
+margin-left:250px;
+position: absolute;
+  top: 48%;
+  left: 0;
+  right: 0;
+  align:center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+::-webkit-input-placeholder {
+
+    font-size: 17px;
+}
+.butt{
+border: 1px;
+border-radius:1px;
+transition: all 0.3s ease 0s;
+
+}
+button{
+  margin-top: 30px;
+  margin-left: 370px;
+  
+  border-color:red; 
+  border-style:none;
+  outline: 0;
+  display: inline-block;
+  padding: 15px 30px;
+  color: black;
+  background-color: #d50000;
+  text-align: center;
+  cursor: pointer;
+  color:white;
+}
+.butt:hover {
+  background-color: #9b0000;
+  
+}
+.booking{
+  border-color: rgba(0,0,0,0.6);
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto;
+  border-bottom-color: rgba(51,51,51);
+  border-radius: 3px;
+  border-image-slice: 100%;
+  display: block;
+  font-family: 'Lato',sans-serif;
+  min-height: 99px;
+  /*padding: 15px;*/
+  -webkit-font-smoothing: antialiased;
+}

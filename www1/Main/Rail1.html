@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>Railway Reservation System</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="css/demo.css">
+
+  <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+.footer-distributed {
+    position: relative;
+    left: 0;
+
+    bottom: 0px;
+    width: 100%;
+  
+    margin-bottom:0px;
+
+}
+  #lol{
+        
+  
+  
+  text-align: center;
+  cursor: pointer;
+  color:white;
+  }
+  .butt:hover {
+  background-color: #ff5722;
+}
+</style>
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+
+</head>
+<body>
+<div id="header">
+<h1>Musaafir</h1>
+<ul>
+    <li><a href="Rail1.html">Home</a></li>
+    <li><a href="Rail1.html#target">Support</a></li>
+    <li><a href="Rail1.html#target">About</a></li>
+    <li><a href="#">Login</a></li>
+</ul>
+    </div>
+<div class="booking">
+<form action="booking1.php" method="post">
+<input type="text" name="Source" list="Source" placeholder="Select Origin">
+<datalist id="Source">
+	<option value="Mumbai">
+	<option value="Delhi">
+	<option value="Chennai">
+	<option value="Kolkata">
+	<option value="Banglore">
+	<option value="Pune">
+</datalist>
+<input type="text" list="Destination" name="Destination" placeholder="Select Destination">
+<datalist id="Destination">
+  <option value="Mumbai">
+  <option value="Delhi"></option>
+  <option value="Chennai"></option>
+  <option value="Kolkata"></option>
+  <option value="Banglore"></option>
+  <option value="Pune"></option>
+</datalist>
+<input type="text" id="datepicker" placeholder="Select Date"></br>
+
+<button class="butt"><a id="lol">Search</a></button>
+
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br><br><br><br><br><br>
+
+    <!-- The content of your page would go here. -->
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left"><a id="target"></a>
+
+        <h3>Musaafir</h3>
+
+        <br>
+
+        <p class="footer-company-name">Copyright © 2017 Musaafir Online Private Limited, India.<br> All rights reserved</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Bandra Kurla Complex</span> Mumbai, India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91 555 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@musaafir.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Musaafir.com is one of the leading online travel portal in India providing a one stop travel solution to all its customers..Find cheap domestic trains to destinations in India within minutes. You can also easily book/cancel IRCTC train tickets on Musaafir.Creating happy and satisfied travellers is our motto!
+
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          
+
+        </div>
+
+      </div>
+
+    </footer>
+</body>
+</html>

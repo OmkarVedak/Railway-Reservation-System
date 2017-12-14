@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Railway Reservation System</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="style1.css">
+<style type="text/css">
+
+#new{
+	color:yellow;
+}
+#new:hover{
+	color:#64dd17;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+     margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 2px;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+tr{
+  color:white;
+}
+tr{background-color: #6a1b9a}
+
+th {
+    background-color: #bf360c;
+    color: black;
+}
+body{
+	background-image: url("rock2.jpg");
+}
+a{
+	color: white;
+}
+a:hover{
+	color: black;
+}
+</style>
+</head>
+
+<body>
+	<div id="header">
+<h1>Omkar Vedak</h1>
+<ul>
+    <li><a href="#">My Account</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="Register/index.html">Register</a></li>
+    <li><a href="login2/index.html">Login</a></li>
+</ul>
+    </div>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "railway";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sorc = mysqli_real_escape_string($conn ,$_POST['Source']);
+$dest = mysqli_real_escape_string($conn ,$_POST['Destination']);
+
+$sql = "SELECT trainid, trainnm, source, des, dep, arr, time, seats FROM trains WHERE source = '$sorc' AND des = '$dest';";
+// WHERE source = '$sorc' AND des = '$dest';
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table>
+  <tr>
+    <th>Train id</th>
+    <th>Train Name</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Departure Time</th>
+    <th>Arrival Time</th>
+    <th>Duration</th>
+    <th>Available seats</th>
+    <th>Book</th>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["trainid"]. "</td><td>" . $row["trainnm"]. " </td><td>" . $row["source"]. "</td><td>" . $row["des"]. " </td><td>" . $row["dep"]. " </td><td>" . $row["arr"]. " </td><td>" . $row["time"]. "</td><td>" . $row["seats"].'</td>'.'<td>'.'<a id="new" href="../Register/index.html">'.'Book Now'.'</a>'.'</td>';
+    }
+    echo '</table>';
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?> 	
+
+
+
+</body>
+</html>

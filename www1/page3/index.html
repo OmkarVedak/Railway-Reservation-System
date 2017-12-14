@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Form</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    var y = document.forms["myForm"]["Dob"].value;
+    var a = document.forms["myForm"]["Dob1"].value;
+    var b = document.forms["myForm"]["Dob2"].value;
+    if (y == "" || a == "" || b == "" || y<1 ||y>31 || a<1 || a>12 || b<1990 || b>2017) {
+        alert("Please provide valid date of birth");
+        return false;
+    }
+    var z = document.forms["myForm"]["Card"].value;
+    var c = document.forms["myForm"]["Card1"].value;
+    if (z == "" || c == ""  ) {
+        alert("Please provide valid Card Details");
+        return false;
+    }
+    if (! /^[0-9]{3}$/.test(c)) {
+  alert("Please input correct CVV");
+  return false;
+}
+    if (
+    myForm.MyCheckbox.checked == false) 
+    {
+        alert ('Please accept the terms and conditions!');
+        return false;
+    } else {    
+        return true;
+    }
+}
+</script>
+      <link rel="stylesheet" href="css/style.css">
+      <style type="text/css">
+        input[type="submit"]:hover{
+          background-color: #64dd17;
+          color:white;
+
+        }
+        body{
+          
+          background-image: url("bg3.jpg");
+        }
+        h1{
+          text-align: center;
+          color:black;
+        }
+        #new{
+          cursor: pointer;
+        }
+
+              
+   html,body{
+
+height:100%;
+}
+#header h1{
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 0;
+    font-family: 'Allerta Stencil';
+    /*font-size: 40px;*/
+    display: inline;
+   color: red;
+   font-size: 2.5em;
+    letter-spacing: 6px;
+    background: -webkit-linear-gradient(#000000, #FF6347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+a{
+text-decoration: none;
+color: black;
+padding: 15px;
+letter-spacing: .7px;
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+}
+    a:hover{
+        color: red;
+        border-bottom-color: orange;
+
+    }
+    h2{
+      text-align: center;
+    }
+#header h1, #header ul {
+    display: inline-block;
+    width: auto;
+    zoom: 1;
+    *display: inline; /* ie6 & 7 */
+}
+
+#header ul li {
+    display: inline;
+}
+ul{
+margin-right: :100px;
+float: right;
+}
+li{
+padding:10px;
+display:inline;
+}
+
+</style>
+  
+</head>
+
+<body>
+  <div id="header">
+<h1>Musaafir</h1>
+<ul>
+   <li><a href="../Main/Rail1.html">Home</a></li>
+    <li><a href="../Main/Rail1.html#target">Support</a></li>
+    <li><a href="../Main/Rail1.html#target">About</a></li>
+    <li><a href="#">Login</a></li>
+</ul>
+    </div>
+<div class="container">
+  <h1>Traveller Details</h1>
+  <form action="thank.html"  method="get" name="myForm" onsubmit="return validateForm()">
+    <div class="row">
+      <h4>Account</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" name="fname" placeholder="Full Name"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+    </div>
+    <h4>Quota and Class</h4>
+     <div class="col-half">
+        <div class="input-group">
+          <select>
+            <option>General</option>
+            <option>Senior Citizen</option>
+            <option>Handicap</option>
+          </select>
+         </div>
+       </div>
+       <div class="col-half">
+        <div class="input-group">
+          
+          <select>
+            <option>2A</option>
+            <option>3A</option>
+            <option>SL</option>
+          </select>
+        </div>
+      </div>
+<br>
+    <div class="row">
+      <div class="col-half">
+        <h4>Date of Birth</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="text" name="Dob" placeholder="DD"/>
+          </div>
+          <div class="col-third">
+            <input type="text" name="Dob1" placeholder="MM"/>
+          </div>
+          <div class="col-third">
+            <input type="text" name="Dob2"  placeholder="YYYY"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Gender</h4>
+        <div class="input-group">
+          <input type="radio" checked="true" name="gender" value="male" id="gender-male"/>
+          <label for="gender-male">Male</label>
+          <input type="radio" name="gender" value="female" id="gender-female"/>
+          <label for="gender-female">Female</label>
+        </div>
+      </div>
+    </div>
+    <h4 id="new">+Add Passengers</h4>
+    <div class="row">
+      <h4>Payment Details</h4>
+      <div class="input-group">
+        <input type="radio" name="payment-method" value="card" id="payment-method-card" checked="true"/>
+        <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+        <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
+        <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>PayTM</span></label>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" name="Card" placeholder="Card Number"/>
+        <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+      </div>
+      <div class="col-half">
+        <div class="input-group input-group-icon">
+          <input type="text" name="Card1" placeholder="Card CVV"/>
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+      </div>
+      <div class="col-half">
+        <div class="input-group">
+          <select>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>Septmber</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <select>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input type="checkbox" id="terms" name="MyCheckbox">
+        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+      </div>
+    </div>
+    <input  type="Submit" name="Submit">
+  </form>
+</div>
+  
+
+</body>
+</html>

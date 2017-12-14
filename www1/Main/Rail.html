@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Railway Reservation System</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="style.css">
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+
+</head>
+<body>
+<div id="header">
+<h1>Omkar Vedak</h1>
+<ul>
+    <li><a href="#">My Account</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="Register/index.html">Register</a></li>
+    <li><a href="login2/index.html">Login</a></li>
+</ul>
+    </div>
+<div class="booking">
+<form>
+<input type="text" list="Source" placeholder="Select Origin">
+<datalist id="Source">
+	<option value="Mumbai">
+	<option value="Delhi">
+	<option value="Chennai">
+	<option value="Kolkata">
+	<option value="Banglore">
+	<option value="Pune">
+</datalist>
+<input type="text" list="Destination" placeholder="Select Destination">
+<datalist id="Destination">
+  <option value="Mumbai">
+  <option value="Delhi"></option>
+  <option value="Chennai"></option>
+  <option value="Kolkata"></option>
+  <option value="Banglore"></option>
+  <option value="Pune"></option>
+</datalist>
+<input type="text" id="datepicker" placeholder="Select Date"></br>
+
+<button class="butt">Search</button>
+
+</form>
+</div>
+</body>
+</html>
